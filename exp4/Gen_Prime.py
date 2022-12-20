@@ -34,4 +34,4 @@ def generate_prime(bit):
 
 
 if __name__ == '__main__':
-    print(generate_prime(1020))
+    print(generate_prime(1024))
