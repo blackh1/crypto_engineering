@@ -8,11 +8,6 @@ module cipher(
     input flag,
     output reg[0:0] init_flag=1);
 
-// input clk;
-// input [63:0] pubk;
-// input [21:0] prik;
-// output reg[0:0] out_key=0;
-// input flag;
 
 integer i=0;
 
@@ -25,9 +20,7 @@ reg [0:0] temp1=0,temp2=0,temp3=0;
 
 always @(posedge clk)
 begin
-    // for(i=21;i>=0;i=i-1) begin
-    //     $display("%b",lsfr2[i]);
-    // end
+
     if(init_flag==1) begin
         for(i=63;i>=0;i=i-1) begin
             temp1=lsfr1[length_lsfr1-18]^lsfr1[length_lsfr1-17]^lsfr1[length_lsfr1-16]^lsfr1[length_lsfr1-13]^pubk[i];
