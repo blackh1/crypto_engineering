@@ -18,8 +18,8 @@ def findModInverse(x, y):
 
 
 def calNprime(N, R):
-    Nprime = findModInverse(N, R)
-    return -Nprime % R
+    Ninv = findModInverse(N, R)
+    return -Ninv % R
 
 
 Nprime = calNprime(N, R)
